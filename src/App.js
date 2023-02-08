@@ -1,15 +1,10 @@
-// App.js
-
-import React, { Component } from "react";
-
-
-class App extends Component {
- render() {
-   return (
-   <div>Hello World</div>
-   );
- }
-}
-
+const App = () => {
+  
+  return (
+    <div>
+      <h1>Hello from App</h1>
+    </div>
+  );
+};
 
 export default App;
