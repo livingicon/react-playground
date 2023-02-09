@@ -14,14 +14,15 @@ const Shop = () => {
   
   const fetchItems = async () => {
     const pokemons = [];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 10; i++) {
       const pokemonURL = `https://pokeapi.co/api/v2/pokemon/${i}`;
       const data = await fetch(pokemonURL);
       const pokes = await data.json();
       console.log(pokes);
       const id = pokes.id;
       const name = pokes.name;
-      pokemons.push({id, name});
+      const image = pokes.sprites.front_default;
+      pokemons.push({id, name, image});
     }
     console.log(pokemons);
     return pokemons;
